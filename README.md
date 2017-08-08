@@ -7,7 +7,8 @@ Sugar CRM is a Customer Relationship Management System that allows employees to 
 TECHNOLOGIES
 
 Passport, MySQL, Sequelize, Node, Express, Handlebars, Google Charts
-![crm](https://user-images.githubusercontent.com/26821653/29053370-bec72d3e-7bbd-11e7-8d42-7a4fbdf3a760.png)
+![sugarcrm](https://user-images.githubusercontent.com/26821653/29053414-fb46a60e-7bbd-11e7-8422-07d1594a70c3.png)
+
 
 
 
