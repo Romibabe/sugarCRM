@@ -1,0 +1,220 @@
+<div class="nav">
+                    <ul class="collapsible" data-collapsible="accordion">
+                        <li>
+                            <div class="collapsible-header">
+                                <a href="/"><i class="material-icons">web</i>Dashboard</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header">
+                                <i class="material-icons md-light">account_box</i>Clients</div>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li><a href="/clients">Search Clients</a></li>
+                                    <li><a href="/create-client">Add New Client</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons md-light">watch</i>Products</div>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li><a href="/products">Search Products</a></li>
+                                    <li><a href="/create-product">Add New Product</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons md-light">description</i>Invoices</div>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li><a href="/invoices">Search Invoices</a></li>
+                                    <li><a href="/create-invoice">Create New Invoice</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="collapsible-header">
+                                <a href="/logout"><i class="material-icons">power_settings_new</i>Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                        </div>
+
+
+
+
+<!--Page Header-->
+<div class="page-header">
+    <div class="container">
+        <h4 class="page-title">Add New Client</h4>
+    </div>
+</div>
+
+<!--Add New Product-->
+
+<div class="page-content">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 s12">
+                <div class="card-panel">
+                    <!-- FORM -->
+                    <div class="row">
+                        <form class="col s12 form-add-new">
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input id="client_first_name" name="client_first_name" type="text" class="validate">
+                                    <label for="client_first_name">First Name:</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input id="client_last_name" name="client_last_name" type="text" class="validate">
+                                    <label for="client_last_name">Last Name:</label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <select id="client_salutation" name="client_salutation">
+                                        <option value="" disabled>Select</option>
+                                        <option value="Mr">Mr</option>
+                                        <option value="Mrs">Mrs</option>
+                                        <option value="Mrs">Ms</option>
+                                        <option value="Mrs">Dr</option>
+                                    </select>
+                                    <label for="client_salutation">Salutation:</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input id="client_nickname" name="client_nickname" type="text" class="validate">
+                                    <label for="client_nickname">Nickname:</label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <select id="client_gender" name="client_gender">
+                                        <option value="" disabled>Select</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                    <label for="client_salutation">Gender:</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input id="client_birthday" name="client_birthday" type="date" class="datepicker">
+                                    <label for="client_birthday">Birthday:</label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <select id="client_birthstone" name="client_birthstone">
+                                        <option value="" disabled>Select</option>
+                                        <option value="Garnet">Garnet</option>
+                                        <option value="Amethyst">Amethyst</option>
+                                        <option value="Aquamarine">Aquamarine</option>
+                                        <option value="Diamond">Diamond</option>
+                                        <option value="Emerald">Emerald</option>
+                                        <option value="Pearl">Pearl</option>
+                                        <option value="Ruby">Ruby</option>
+                                        <option value="Peridot">Peridot</option>
+                                        <option value="Sapphire">Sapphire</option>
+                                        <option value="Opal">Opal</option>
+                                        <option value="Citrine">Citrine</option>
+                                        <option value="Turquoise">Turquoise</option>
+                                    </select>
+                                    <label for="client_salutation">Birthstone:</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input id="client_age" name="client_age" type="text" class="validate">
+                                    <label for="client_age">Age:</label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <select id="client_status" name="client_status">
+                                        <option value="" disabled>Select</option>
+                                        <option value="true">In Relationship</option>
+                                        <option value="false">Not In Relationship</option>
+                                    </select>
+                                    <label for="client_status">Relationship Status:</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input id="client_anniversary" name="client_anniversary" type="date" class="datepicker">
+                                    <label for="client_anniversary">Anniversary:</label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <select id="client" name="client" class="browser-default" style="margin-top:0px;">
+                                        <option value="0" disabled>Family Member:</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <textarea id="client_preferences" name="client_preferences" class="validate materialize-textarea" length="600"></textarea>
+                                    <label for="client_preferences" class="">Preferences:</label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <textarea id="client_favorites" name="client_favorites" class="validate materialize-textarea" length="120"></textarea>
+                                    <label for="client_favorites" class="">Favorites:</label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="client_img_url" name="client_img_url" type="text" class="validate">
+                                    <label for="client_img_url" class="">Image URL:</label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input id="client_phone_number" name="client_phone_number" type="text" class="validate">
+                                    <label for="client_phone_number">Phone Number:</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input id="client_email" name="client_email" type="text" class="validate">
+                                    <label for="client_email">Email:</label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="client_billing" name="client_billing" type="text" class="validate">
+                                    <label for="client_billing" class="">Billing Address:</label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="client_shipping" name="client_shipping" type="text" class="validate">
+                                    <label for="client_shipping" class="">Shipping Address:</label>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="spacer-10"></div>
+                                <div class="input-field col s6">
+                                    <p>EMPLOYEE:</p>
+                                    <h4 id="userHeader" data-userID="{{user.id}}">{{user.name}}</h4>
+                                </div>
+                                <div class="input-field col s6 right-align">
+                                    <a class="btn" id="clientReset">Reset</a>
+                                    <a class="btn" id="clientSubmit">Submit</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

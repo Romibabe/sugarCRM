@@ -1,0 +1,106 @@
+<!--Page Header-->
+<div class="page-header">
+
+        <h4 class="page-title">New Sale</h4>
+
+</div>
+
+
+
+<div class="page-content">
+
+        <div class="row">
+            <div class="col s12 m12 s12">
+
+                <div class="card-panel">
+
+                    <!-- FORM -->
+                    <div class="row">
+                        <form class="col s12 form-add-new" role="form">
+                            <div class="row">
+                                <div class="input-field col s6">
+                                   <p>EMPLOYEE:</p>
+                                    <h4 id="userHeader" data-userID="{{user.id}}">{{user.name}}</h4>
+                                </div>
+
+                                <div class="input-field col s6">
+                                    <select id="client" name="client" class="browser-default" onblur="clientChange()">
+                                        <option value="0" disabled>Select Customer:</option>
+                                    </select>
+                                    <table id="customerTable" style="display: none">
+                                        <thead>
+                                            <tr>
+                                                <th>Nick Name</th>
+                                                <th>Family</th>
+                                                <th>Favorites</th>
+                                                <th>Preferences</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td id="custNick"></td>
+                                                <td id="custFamily"></td>
+                                                <td id="custFavs"></td>
+                                                <td id="custPrefs"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="input-field col s6" id="product_sku_div">
+                                    <input id="product_sku" name="product_sku" type="text" class="validate">
+                                    <label for="product_sku">Product Search:</label>
+                                </div>
+                                <div class="input-field col s6 ">
+                                    <a class="waves-effect waves-light btn" id="productSearch">SEARCH</a>
+                                    <a class="waves-effect waves-light btn" id="productAdd">ADD</a>
+                                </div>
+                            </div>
+
+                            <div class="row" id="lineItemsList">
+                                <div class="input-field col s4">
+                                    <label for="name" class="lineItemHeader">Product</label>
+                                </div>
+                                <div class="input-field col s2">
+                                    <label for="price" class="lineItemHeader">Price</label>
+                                </div>
+                                <div class="input-field col s1">
+                                    <label for="qty" class="lineItemHeader">QTY</label>
+                                </div>
+                                <div class="input-field col s2">
+                                    <label for="discount" class="lineItemHeader">Discount</label>
+                                </div>
+                                <div class="input-field col s2">
+                                    <label for="total" class="lineItemHeader">Total</label>
+                                </div>
+                                <div class="input-field col s1">
+                                    <label for="discount" class="lineItemHeader">Remove</label>
+                                </div>
+                            </div>
+
+                            <div class="row" id="bottomRow">
+                                <div class="input-field col s2" id="bottomSubtotalHeader">
+                                    <label for="discount" class="lineItemHeader">Discount</label>
+                                </div>
+                                <div class="input-field col s2" id="bottomTaxHeader">
+                                    <label for="total" class="lineItemHeader">Tax</label>
+                                </div>
+                                <div class="input-field col s2" id="bottomTotalHeader">
+                                    <label for="total" class="lineItemHeader">Total</label>
+                                </div>
+                                <div class="input-field col s6 right-align">
+                                    <a class="btn" id="invoiceReset">Reset</a>
+                                    <a class="btn" id="invoiceSubmit">Submit</a>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</div>
+

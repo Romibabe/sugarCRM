@@ -1,0 +1,28 @@
+td, th {
+    text-align: center;
+}
+
+.tableLeft {
+    text-align:left;
+}
+
+.removeItem {
+    margin-top: 20px;
+}
+
+.page-header, .page-content {
+    max-width:90%;
+    margin: 0px auto;
+}
+
+.lineItemHeader{
+    transform: translateY(-140%);
+}
+
+#client {
+    margin-top:40px;
+}
+
+#lineItemsList, #bottomRow {
+    margin-top: 80px;
+}

@@ -1,0 +1,291 @@
+
+<div class="nav">
+                    <ul class="collapsible" data-collapsible="accordion">
+                        <li>
+                            <div class="collapsible-header">
+                                <a href="/"><i class="material-icons">web</i>Dashboard</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header">
+                                <i class="material-icons md-light">account_box</i>Clients</div>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li><a href="/clients">Search Clients</a></li>
+                                    <li><a href="/create-client">Add New Client</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons md-light">watch</i>Products</div>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li><a href="/products">Search Products</a></li>
+                                    <li><a href="/create-product">Add New Product</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons md-light">description</i>Invoices</div>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li><a href="/invoices">Search Invoices</a></li>
+                                    <li><a href="/create-invoice">Create New Invoice</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="collapsible-header">
+                                <a href="/logout"><i class="material-icons">power_settings_new</i>Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+<div class="page-header">
+    <div class="row valign-wrapper">
+        <div class="col l10 m8 left-align">
+            <h4 class="page-title welcome">Welcome, <span class="special">{{user.name}}</span></h4>
+
+        </div>
+        <div class="col l2 m4 right-align">
+            <img src="{{user.photo}}" class="employee-photo responsive-img circle" alt="{{user.name}}">
+        </div>
+    </div>
+    <div class="row col l12 tile-title" id="todayDate"></div>
+</div>
+
+<div class="page-content">
+
+    <div class="row top-part">
+
+        <!-- BEGIN -->
+        <div class="col l3 m6 s12">
+            <div class="card">
+                <div class="card-content">
+                    <small class="tile-title">Total Sales</small>
+                    <h2 class="big truncate" id="userSales">{{user.sales}}</h2>
+                </div><!--end .card-body -->
+            </div><!--end .card -->
+        </div><!--end .col -->
+        <!-- END -->
+
+        <!-- BEGIN -->
+        <div class="col l3 m6 s12">
+            <div class="card">
+                <div class="card-content">
+                    <small class="tile-title">Sales Performance</small>
+                    <h2 class="big truncate" id="userPerformance">{{user.performance}}</h2>
+                </div><!--end .card-body -->
+            </div><!--end .card -->
+        </div><!--end .col -->
+        <!-- END -->
+
+        <!-- BEGIN -->
+        <div class="col l3 m6 s12">
+            <div class="card">
+                <div class="card-content">
+                    <small class="tile-title">Pending Work Orders</small>
+                    <h2 class="big truncate">25</h2>
+                </div><!--end .card-body -->
+            </div><!--end .card -->
+        </div><!--end .col -->
+        <!-- END -->
+
+        <!-- BEGIN -->
+        <div class="col l3 m6 s12">
+            <div class="card">
+                <div class="card-content">
+                    <small class="tile-title">Customer Satisfaction</small>
+                    <h2 class="big truncate">95%</h2>
+                </div><!--end .card-body -->
+            </div><!--end .card -->
+        </div><!--end .col -->
+        <!-- END -->
+
+
+    </div><!--end .row -->
+
+    <div class="row bot-part">
+
+        <!-- BEGIN CHART -->
+        <div class="col l9 m12">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-title">My Invoices</div>
+                    <div id="piechart"></div>
+                </div>
+            </div><!--end .card -->
+        </div><!--end .col -->
+        <!-- END CHART -->
+
+        <!-- BEGIN TASKS -->
+        <div class="col l3 m12">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-title">My Tasks</div>
+
+                    <ul class="list">
+                        <li class="tile">
+                            <input type="checkbox" id="test1" />
+                            <label for="test1">Submit status report</label>
+                        </li>
+                        <li class="tile">
+                            <input type="checkbox" id="test2" />
+                            <label for="test2">Schedule dept meeting</label>
+                        </li>
+                        <li class="tile">
+                            <input type="checkbox" id="test3" />
+                            <label for="test3">Afternoon tea with Julie</label>
+                        </li>
+                        <li class="tile">
+                            <input type="checkbox" id="test4" checked />
+                            <label for="test4">Revise store inventory</label>
+                        </li>
+                        <li class="tile">
+                            <input type="checkbox" id="test5" checked/>
+                            <label for="test5">Pizza party</label>
+                        </li>
+                    </ul>
+                    <form action="#">
+
+                    </form>
+                </div>
+            </div><!--end .card -->
+        </div><!--end .col -->
+        <!-- END TASKS -->
+    </div><!--end .row -->
+
+    <div class="row client-list">
+
+        <!-- BEGIN CLIENTS -->
+        <div class="col l12 m12">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-title">My Clients</div>
+                    <ul class="list">
+
+                        {{#myClients}}
+                            <li class="tile">
+                                <div class="row tile-content">
+                                    <div class="tile-icon">
+                                        <img src="{{photo_url}}" alt="{{nickname}}">
+                                    </div>
+                                    <div class="tile-text">
+                                        <a href=""><span class="tile-title">{{salutation}}</span>   {{first_name}} {{last_name}}</a>
+                                        <div class="tile-buttons">
+                                        <a href="#" class="btn"><i class="material-icons">phone</i></a>
+                                        <a href="#" class="btn"><i class="material-icons">email</i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row tile-content">
+                                    <div class="col l6 m12 s12">
+                                        <div class="tile-title">Last Invoice</div>
+                                        <div class="row">
+                                            <p>Amount Due:
+                                                <span class="tile-text invoiceTotal">{{invoices.0.total}}</span></p>
+                                            <p>Amount Paid:
+                                                <span class="tile-text invoiceBalance">{{invoices.0.payment_amount}}</span></p>
+                                            <p>Transaction Date:
+                                                <span class="tile-text invoiceDate">{{invoices.0.date_created}}</span></p>
+                                        </div>
+
+                                    </div>
+                                    <div class="col l6 m12 s12">
+                                        <div class="tile-title">Favorites</div>
+                                        <div class="row products">
+                                            <a href="#" class="tile-icon"><img src="assets/images/ring_cartier.png" class="products" alt="SKU: 10001"></a>
+                                            <a href="#" class="tile-icon"><img src="assets/images/ring_chanel.png" class="products" alt="SKU: 10001"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        {{/myClients}}
+
+                    </ul>
+                </div>
+            </div><!--end .card -->
+        </div><!--end .col -->
+        <!-- END CLIENTS -->
+   
+
+   <script>
+    $('#todayDate').text(moment().format("dddd, MMMM Do YYYY"));
+
+   </script>
+
+   <script>
+
+   $('#userSales').text('$' + parseFloat($('#userSales').text()).formatMoney(0));
+    $('#userPerformance').text(parseFloat($('#userPerformance').text()).formatMoney(0) + '%');
+
+    $('.invoiceTotal').each(function(){
+        $(this).text('$' + parseFloat($(this).text()).formatMoney(2));
+    });
+
+    $('.invoiceBalance').each(function(){
+        $(this).text('$' + parseFloat($(this).text()).formatMoney(2));
+    });
+
+    // Format date using moment.js
+
+    
+    $('.invoiceDate').each(function(){
+        $(this).text(moment($(this).text()).format("MM/DD/YYYY"));
+    });
+</script>
+
+<script>
+    google.charts.load("current", {packages:["corechart"]});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['Products', 'Sales'],
+            ['Low End', {{user.lowEnd}}], ['Mid', {{user.mid}}], ['High End', {{user.highEnd}}], ['Luxury', {{user.luxury}} ]
+        ]);
+
+        var options = {
+            backgroundColor: '#e5e6e6',
+            chartArea: {
+                top: 20,
+                bottom: 20,
+                left: 20,
+                right: 20,
+                height: '100%',
+            },
+            height: 400,
+//            slices: {
+//                2: {
+//                    offset: 0.2
+//                }
+//            },
+            pieSliceText: 'value',
+            pieHole: 0.4,
+            legend: {
+                alignment: 'center',
+                position: 'labeled',
+                textStyle: {
+                    color: '#888888',
+                    fontSize: 14}},
+            colors: ['#935463', '#938454', '#549384', '#546393'],
+            fontSize: '20',
+            fontName: 'Josefin Sans'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+    }
+</script>
+   <div class="footer center-align">
+                    <a href="#">© 2017 Sugar CRM</a>
+                </div> 
+
+
+    </div>
+</div>
+
